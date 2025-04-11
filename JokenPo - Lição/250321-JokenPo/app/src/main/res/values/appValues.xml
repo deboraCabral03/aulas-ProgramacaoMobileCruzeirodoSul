@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appTitulo">JOKENPO PLAY</string>
+    <string name="appResultado">Inicie sua opção:</string>
+    <string name="appTextBtnPlay">Jogar</string>
+
+    <color name="appColor1">#003B71</color>
+    <color name="appColor2">#F79A16</color>
+    <color name="appColor3">#EDA800</color>
+    <color name="appColor4">#FFFFFF</color>
+</resources>

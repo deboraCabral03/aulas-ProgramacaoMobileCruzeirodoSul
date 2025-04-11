@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/appColor1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitulo"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/appColor2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/placarUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Placar do Usuário -->
+    <TextView
+        android:id="@+id/placarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/appColor4"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Placar do PC -->
+    <TextView
+        android:id="@+id/placarPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PC: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/appColor4"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Imagem do resultado -->
+    <ImageView
+        android:id="@+id/imgResultado"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@id/placarUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/padrao" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appResultado"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/appColor2"
+        app:layout_constraintTop_toBottomOf="@id/imgResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Mensagem de Ganhador -->
+    <TextView
+        android:id="@+id/ganhador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/appColor4"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/textResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botão Reset -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resetar Jogo"
+        android:onClick="resetJogo"
+        android:textStyle="bold"
+        android:textColor="@color/appColor1"
+        android:backgroundTint="@color/appColor3"
+        app:layout_constraintTop_toBottomOf="@id/ganhador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Botões de Escolha -->
+    <ImageView
+        android:id="@+id/imgPedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectPedra"
+        app:layout_constraintTop_toBottomOf="@id/btnReset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgPapel"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/imgPapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectPapel"
+        app:layout_constraintTop_toBottomOf="@id/btnReset"
+        app:layout_constraintStart_toEndOf="@id/imgPedra"
+        app:layout_constraintEnd_toStartOf="@id/imgTesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/imgTesoura"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectTesoura"
+        app:layout_constraintTop_toBottomOf="@id/btnReset"
+        app:layout_constraintStart_toEndOf="@id/imgPapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/tesoura" />
+
+
+            <!-- Placar de Pontuação -->
+    <TextView
+        android:id="@+id/textPlacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você: 0  |  PC: 0"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/appColor4"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Botão de Reset -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="resetGame"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textPlacar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
