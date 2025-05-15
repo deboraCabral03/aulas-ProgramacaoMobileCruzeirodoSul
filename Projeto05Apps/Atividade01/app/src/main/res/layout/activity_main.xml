@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:fontFamily="monospace"
+        android:padding="16sp"
+        android:text="Sistema de Compras"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textTitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:fontFamily="monospace"
+        android:padding="10sp"
+        android:text="Escolha o seu produto: "
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cbArroz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arroz (R$2,69)"
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace" />
+
+    <CheckBox
+        android:id="@+id/cbLeite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leite (R$2,70)"
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace" />
+
+    <CheckBox
+        android:id="@+id/cbCarne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carne (R$16,70)"
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace"/>
+
+    <CheckBox
+        android:id="@+id/cbFeijao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feijão (R$3,38) "
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace" />
+
+    <CheckBox
+        android:id="@+id/cbCoca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coca-Cola 2L (R$3,00)"
+        android:padding="10sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace" />
+
+    <Button
+        android:id="@+id/btnSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="monospace"
+        android:padding="16sp"
+        android:text="Total da Compra"
+        android:onClick="enviar"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:padding="16sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace" />
+</LinearLayout>
